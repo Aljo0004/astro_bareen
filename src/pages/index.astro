@@ -1,0 +1,34 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Hero from "../components/Hero.astro";
+import Carousel from "../components/Carousel.astro";
+import Sectionwrapper from "../components/Sectionwrapper.astro";
+import Signupbackground from "../components/Signupbackground.astro";
+import Products from "../components/Products.astro";
+import Shopbox from "../components/Shopbox.astro";
+import Gallery from "../components/Gallery.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Navigation />
+    <main>
+      <Hero />
+      <Carousel />
+      <Sectionwrapper />
+      <Signupbackground />
+      <Products />
+      <Shopbox />
+      <Gallery />
+    </main>
+    <Footer />
+  </body>
+</html>
