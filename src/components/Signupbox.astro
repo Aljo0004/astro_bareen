@@ -3,6 +3,18 @@ import Headline from "./Headline.astro";
 import Button from "./Button.astro";
 ---
 
-<Headline />
-<p>Det er præcis den energi og passion, vi i Bareen ønsker at støtte og fremme. Sammen sætter vi fokus på sundhed, styrke og bæredygtige valg - for os selv, hinanden og den verden, vi bevæger os i.</p>
-<Button />
+<div class="signupboxx">
+  <Headline />
+  <p>Det er præcis den energi og passion, vi i Bareen ønsker at støtte og fremme. Sammen sætter vi fokus på sundhed, styrke og bæredygtige valg - for os selv, hinanden og den verden, vi bevæger os i.</p>
+  <Button />
+</div>
+
+<style>
+  .signupboxx {
+    background-color: #4c4c4c;
+  }
+  .signupboxx p {
+    z-index: +1;
+    color: #ffffff;
+  }
+</style>
