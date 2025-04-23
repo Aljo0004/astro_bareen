@@ -1,0 +1,38 @@
+---
+import Categorieswrapper from './Categorieswrapper.astro';
+import Productcard from './Productcard.astro';
+
+const products = [
+  { image: "/produkt1.webp", name: "Løbevest - organic cotton", price: 199 },
+  { image: "/produkt2.webp", name: "Men's Active T-shirt - Sport 1", price: 399 },
+  { image: "/produkt3.webp", name: "Water bottle - dark grey", price: 59 },
+  { image: "/produkt4.webp", name: "Copenhagen Marathon - limited edition", price: 500 },
+];
+---
+
+<style>
+    .products-section {
+      padding: 2rem 2rem;
+    }
+  
+    .products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+    .products {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+
+<section class="products-section">
+  <Categorieswrapper />
+  <div class="products">
+    {products.map(product => (
+      <Productcard {...product} />
+    ))}
+  </div>
+</section>
