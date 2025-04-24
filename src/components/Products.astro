@@ -9,24 +9,25 @@ const products = [
   { image: "/produkt4.webp", name: "Copenhagen Marathon - limited edition", price: 500 },
 ];
 ---
-
 <style>
-    .products-section {
-      padding: 2rem 2rem;
-    }
-  
-    .products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
+  .products-section {
+    padding: 0;
+  }
 
-@media (max-width: 600px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+  }
+
+
+  @media (max-width: 600px) {
     .products {
       grid-template-columns: 1fr;
     }
   }
-  </style>
+</style>
 
 <section class="products-section">
   <Categorieswrapper />
