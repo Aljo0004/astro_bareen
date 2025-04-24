@@ -1,0 +1,85 @@
+---
+const {galleryimg} = Astro.props
+const galleryArray= [
+    {galleryimg: "/friends1.png"},
+    {galleryimg: "/friends2.png"},
+    {galleryimg: "/friends3.png"},
+    {galleryimg: "/friends4.png"},
+];
+   
+
+---
+<style>
+
+    .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery-img {
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker p {
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+  font-size: 16px;
+  color: #888;
+  letter-spacing: 2px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-15%);
+  }
+}
+
+
+</style>
+
+<section class="products-section">
+    <div class="ticker">
+  <p>
+    <span>FRIENDS & FAMILY · FRIENDS & FAMILY ·  FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY ·</span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+  </p>
+</div>
+  <div class="gallery">
+    {galleryArray.map(img => (
+      <img src={img.galleryimg} class="gallery-img">
+    ))}
+  </div>
+
+      <div class="ticker">
+  <p>
+    <span>FRIENDS & FAMILY · FRIENDS & FAMILY ·  FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY · FRIENDS & FAMILY ·</span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+    <span>FRIENDS & FAMILY · </span>
+  </p>
+</div>
+</section>
