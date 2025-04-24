@@ -3,6 +3,48 @@ import Headline from "./Headline.astro";
 import Button from "./Button.astro";
 ---
 
-<Headline />
-<p>Det er præcis den energi og passion, vi i Bareen ønsker at støtte og fremme. Sammen sætter vi fokus på sundhed, styrke og bæredygtige valg - for os selv, hinanden og den verden, vi bevæger os i.</p>
-<Button />
+<div class="signupboxx">
+  <!-- <Headline /> -->
+  <h2>TAG DEL I FESTEN</h2>
+  <p>Det er præcis den energi og passion, vi i Bareen ønsker at støtte og fremme. Sammen sætter vi fokus på sundhed, styrke og bæredygtige valg - for os <br /> selv, hinanden og den verden, vi bevæger os i.</p>
+  <a href="index.astro" class="signup_knap">SIGN UP</a>
+  <!-- <Button /> -->
+</div>
+
+<style>
+  .signupboxx {
+    background-color: #4c4c4c;
+  }
+  .signupboxx h2 {
+    z-index: +1;
+    color: #ffffff;
+    padding-top: 150px;
+    text-align: center;
+    font-size: 50px;
+  }
+  .signupboxx p {
+    z-index: +1;
+    color: #ffffff;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .signup_knap {
+    background-color: #4c4c4c;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border: 2px solid white;
+    width: 150px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+</style>
