@@ -2,20 +2,46 @@
 import Signupbox from "./Signupbox.astro";
 ---
 
-<div class="signupboxx">
+<div class="signupwrapper">
   <Signupbox />
+  <div class="partypicwrapper">
   <img src="party.png" alt="partypic" class="partypic" />
+  </div>
 </div>
 
 <style>
-  .signupboxx {
+  .signupwrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
+  .partypicwrapper {
+    background-color:#4c4c4c;
+    width:100%
+  }
   .partypic {
-    width: 30%;
-    padding: 90px;
+    width: 70%;
+    padding: 100px;
     background-color: #4c4c4c;
+  }
+    @media (max-width: 800px) {
+.signupwrapper {
+    flex-direction: column;
+    align-items: center;  
+      background-color: #4c4c4c;   
+  }
+
+ .partypicwrapper {
+   order: -1;
+    background-color: #4c4c4c; 
+     width: 100%;  
+ }
+
+  .partypic { 
+     width: 70%;           
+    padding-left: 92px;  
+    align-items:center;  
+    padding-bottom: 10px;  
+  }
   }
 </style>

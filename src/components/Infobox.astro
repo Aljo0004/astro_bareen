@@ -4,7 +4,7 @@
 
 <div class="bareen_cphmarathon">
   <img src="route.png" alt="image" class="imgroute" />
-  <div>
+  <div class="bareenxcphcol">
     <h2 class="bareenxcphh2">BAREEN X CPH <br /> MARATHON</h2>
     <p class="bareenxcphp">Vi er stolte af at kunne offentliggøre vores samarbejde med CPH Marathon - en hyldest til bevægelse, viljestyrke og fællesskab. Hos Bareen tror vi på, at en aktiv livsstil er med til at skabe både fysisk og mental balance. Det handler ikke kun om at løbe langt, men om at være i bevægelse - i hverdagen, i tankerne og i måden, vi lever på. <br /> <br /> Samarbejdet med CPH Marathon er derfor en naturlig forlængelse af vores værdier. Vi vil gerne være med, når mennesker samles om noget større - når tusindvis af løbere tager Københavns gader med målrettethed, glæde og fællesskab som drivkraft.</p>
   </div>
@@ -24,14 +24,39 @@
     text-align: center;
     align-items: center;
     place-items: center;
-    padding-top: 100px;
+    padding-top: 50px;
     font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .bareenxcphp {
     text-align: center;
     align-items: center;
     padding-left: 60px;
     padding-right: 60px;
-    line-height: 20px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @media (max-width:800px) {
+  .bareen_cphmarathon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bareenxcphcol{
+     order: -1;
+  }
+  .imgroute{
+    width: 60%;
+    margin-left:auto;
+  }
+.bareenxcphh2 {
+  padding-top:20px
+}
+.bareenxcphp {
+  line-height:30px;
+}
   }
 </style>
+
